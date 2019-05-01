@@ -1,7 +1,7 @@
 
 node {
   stage('checkout sources') {
-        git url: 'https://github.com/jschmersal-cscc/special-topics-labs-quality'
+        git url: 'https://github.com/LydiaSheenR/special-topics-labs-ci'
   }
 
   stage('Build') {
@@ -13,7 +13,7 @@ node {
 
   post {
           always {
-              junit '/home/lrhymond/IdeaProjects/special-topics-labs-ci/target/surefire-reports'
+              junit 'target/surefire-reports/*.xml'
           }
   }
 }
