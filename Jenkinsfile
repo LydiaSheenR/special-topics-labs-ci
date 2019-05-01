@@ -10,7 +10,7 @@ node {
     }
 
   }
-  
+
 
    stage('Test') {
       steps{
